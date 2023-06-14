@@ -18,9 +18,12 @@
     "side project project"
     "side project project";
 }
-
+/* Sidebar */
 #sidebar {
   grid-area: side;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #header {
