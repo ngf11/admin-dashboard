@@ -42,8 +42,25 @@ ul {
 /* header */
 #header {
   grid-area: header;
+  display: flex;
+  flex-direction: column;
 }
-
+.top-header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.bell-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.bottom-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
 /* main */
 #main {
   grid-area: project;
