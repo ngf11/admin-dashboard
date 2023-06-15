@@ -13,64 +13,36 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
   grid-template-rows: repeat(4, minmax(100px, 1fr));
-  grid-template-areas:
-    "side header header"
-    "side project project"
-    "side project project";
 }
 /* Sidebar */
 #sidebar {
-  grid-area: side;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 10px;
-  padding: 10px;
 }
 .logo {
-  display: flex;
 }
 .linksbox1 {
-  display: flex;
 }
 .linksbox2 {
-  display: flex;
 }
 ul {
   list-style-type: none;
 }
 /* header */
 #header {
-  grid-area: header;
-  display: flex;
-  flex-direction: column;
 }
 .top-header {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
 }
 .bell-icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 .bottom-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
 }
 /* main */
 #main {
-  grid-area: project;
-  /* display: grid;
-  grid-template-columns: repeat(2, 2fr) repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(auto-fit, 1fr); */
 }
-
+.projects {
+}
 .project-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr) repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(auto-fit, 1fr);
+}
+.announce-content {
+}
+.trending {
 }
