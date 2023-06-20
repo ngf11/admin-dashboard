@@ -98,4 +98,35 @@ ul {
 /* main */
 #main {
   grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr) repeat(auto-fit, 1fr) repeat(
+      auto-fit,
+      2fr
+    );
+  grid-template-rows: repeat(auto-fit, 1fr) repeat(auto-fit, 1fr) repeat(
+      auto-fit,
+      1fr
+    );
+  grid-template-areas:
+    "card card anno"
+    "card card anno"
+    "card card tren"
+    "card card tren";
+  gap: 4rem;
+}
+
+.projects {
+  grid-area: card;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.announcement {
+  grid-area: anno;
+}
+
+.trending {
+  grid-area: tren;
 }
