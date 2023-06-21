@@ -123,6 +123,24 @@ ul {
   gap: 4rem;
 }
 
+.project-cards {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  gap: 2rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-bnt {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 1rem;
+  border: none;
+}
 .announcement {
   grid-area: anno;
   border: 1px solid black;
@@ -132,6 +150,11 @@ ul {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+}
+
+.announce-content {
+  border-bottom: 1px solid gray;
+  padding: 1rem;
 }
 
 .trending {
@@ -144,4 +167,8 @@ ul {
 
   display: flex;
   flex-direction: column;
+}
+div.trending::before {
+  content: "Trending";
+  font-size: 2rem;
 }
