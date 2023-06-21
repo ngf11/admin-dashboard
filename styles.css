@@ -109,7 +109,7 @@ ul {
     );
   grid-template-areas:
     "card card anno"
-    "card card anno"
+    "card card tren"
     "card card tren"
     "card card tren";
   gap: 4rem;
@@ -125,8 +125,23 @@ ul {
 
 .announcement {
   grid-area: anno;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  gap: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .trending {
   grid-area: tren;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  gap: 2rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
 }
