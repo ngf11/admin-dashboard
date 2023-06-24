@@ -14,8 +14,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-areas:
     "side header header header"
     "side main main main"
@@ -52,6 +52,7 @@ ul {
     "head1 head1 head1"
     "head2 head2 head2";
   background-color: var(--header-boxes-color);
+  color: whitesmoke;
 }
 
 .top-header {
@@ -81,7 +82,7 @@ ul {
   grid-area: head2;
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-areas: "info info info . bnt";
   padding: 2rem;
   gap: 2rem;
@@ -127,8 +128,8 @@ ul {
       auto-fit,
       2fr
     );
-  grid-template-rows: repeat(auto-fill, 1fr) repeat(auto-fill, 1fr) repeat(
-      auto-fill,
+  grid-template-rows: repeat(auto-fit, 1fr) repeat(auto-fit, 1fr) repeat(
+      auto-fit,
       1fr
     );
   grid-template-areas:
@@ -184,14 +185,13 @@ ul {
   border-radius: 5px;
   font-size: 1rem;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .announce-content {
   border-bottom: 1px solid gray;
-  padding: 1rem;
 }
 
 .trending {
