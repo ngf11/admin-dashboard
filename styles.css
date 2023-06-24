@@ -27,6 +27,8 @@
 /* sidebar */
 #sidebar {
   grid-area: side;
+  position: sticky;
+  border: 2px solid white;
 }
 .logo {
   display: flex;
@@ -42,17 +44,25 @@ ul {
 /* header */
 #header {
   grid-area: header;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-areas:
+    "head1 head1 head1"
+    "head2 head2 head2";
+  /* display: flex;
   flex-direction: column;
   padding: 2rem;
+  border: 2px solid white; */
 }
 
 .top-header {
+  grid-area: head1;
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-areas: " search search search . bellicon";
-  padding: 2rem;
+  padding: 1rem;
   gap: 2rem;
 }
 .search-bar {
@@ -70,11 +80,12 @@ ul {
 }
 
 .bottom-header {
+  grid-area: head2;
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "info info info . bnt";
-  padding: 2rem;
+  /* padding: 2rem; */
   gap: 2rem;
 }
 
@@ -100,12 +111,13 @@ ul {
   flex-direction: row;
   align-items: center; */
   grid-area: bnt;
-  padding: 2rem;
-  gap: 2rem;
+
+  gap: 1rem;
 }
 .head-bnt {
-  border-radius: 20px;
   padding: 0.7rem;
+
+  border-end-end-radius: -20px;
 }
 /* main */
 #main {
@@ -115,16 +127,16 @@ ul {
       auto-fit,
       2fr
     );
-  grid-template-rows: repeat(auto-fit, 1fr) repeat(auto-fit, 1fr) repeat(
-      auto-fit,
+  grid-template-rows: repeat(auto-fill, 1fr) repeat(auto-fill, 1fr) repeat(
+      auto-fill,
       1fr
     );
   grid-template-areas:
     "card card anno"
     "card card tren"
-    "card card tren"
     "card card .";
   gap: 4rem;
+  padding: 2rem;
 }
 
 .projects {
@@ -135,6 +147,10 @@ ul {
       auto-fill,
       1fr
     );
+  grid-template-areas:
+    "card card"
+    "card card"
+    "card card";
   gap: 4rem;
 }
 
@@ -143,7 +159,7 @@ ul {
   border-radius: 5px;
   font-size: 1rem;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 
   display: flex;
   flex-direction: column;
