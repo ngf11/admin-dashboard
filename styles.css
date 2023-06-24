@@ -7,9 +7,9 @@
 :root {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* remove these  */
-  background-color: rgb(26, 26, 81);
-  color: white;
+  --side-bnt-color: #1e1b4b;
+  --header-boxes-color: #4f46e5;
+  --main-color: #a5b4fc;
 }
 
 .container {
@@ -28,7 +28,8 @@
 #sidebar {
   grid-area: side;
   position: sticky;
-  border: 2px solid white;
+  background-color: var(--side-bnt-color);
+  color: whitesmoke;
 }
 .logo {
   display: flex;
@@ -50,10 +51,7 @@ ul {
   grid-template-areas:
     "head1 head1 head1"
     "head2 head2 head2";
-  /* display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  border: 2px solid white; */
+  background-color: var(--header-boxes-color);
 }
 
 .top-header {
@@ -85,7 +83,7 @@ ul {
   grid-template-columns: repeat(auto-fit, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "info info info . bnt";
-  /* padding: 2rem; */
+  padding: 2rem;
   gap: 2rem;
 }
 
@@ -107,17 +105,19 @@ ul {
 }
 
 .header-bnt {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  align-items: center; */
+  align-items: center;
   grid-area: bnt;
 
   gap: 1rem;
 }
 .head-bnt {
   padding: 0.7rem;
-
-  border-end-end-radius: -20px;
+  background-color: var(--side-bnt-color);
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
 }
 /* main */
 #main {
@@ -136,7 +136,9 @@ ul {
     "card card tren"
     "card card .";
   gap: 4rem;
-  padding: 2rem;
+  padding: 1rem;
+
+  background-color: var(--main-color);
 }
 
 .projects {
@@ -152,6 +154,7 @@ ul {
     "card card"
     "card card";
   gap: 4rem;
+  padding: 1rem;
 }
 
 .project-cards {
@@ -164,7 +167,10 @@ ul {
   display: flex;
   flex-direction: column;
 }
-
+.card-content {
+  border-left: 4px solid #1e1b4b;
+  padding: 1rem;
+}
 .card-bnt {
   display: flex;
   flex-direction: row;
@@ -198,8 +204,4 @@ ul {
 
   display: flex;
   flex-direction: column;
-}
-div.trending::before {
-  content: "Trending";
-  font-size: 2rem;
 }
