@@ -66,9 +66,14 @@ ul {
 }
 .search-bar {
   grid-area: search;
+  padding-left: 2.5rem;
 }
 .search {
   size: 100px;
+}
+
+.search-bnt {
+  background-color: var(--header-boxes-color);
 }
 
 .bell-icon {
