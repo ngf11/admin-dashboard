@@ -74,6 +74,7 @@ ul {
 
 .search-bnt {
   background-color: var(--header-boxes-color);
+  border: none;
 }
 
 .bell-icon {
@@ -165,6 +166,7 @@ ul {
 
 .project-cards {
   border: 1px solid black;
+  border-left: 4px solid var(--header-boxes-color);
   border-radius: 5px;
   font-size: 1rem;
   gap: 2rem;
@@ -174,8 +176,8 @@ ul {
   flex-direction: column;
 }
 .card-content {
-  border-left: 4px solid var(--header-boxes-color);
   padding: 1rem;
+  gap: 1rem;
 }
 .card-bnt {
   display: flex;
