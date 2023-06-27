@@ -85,7 +85,7 @@ input {
   color: whitesmoke;
   border: none;
   border-radius: 5px;
-}
+  
 
 .bell-icon {
   grid-area: bellicon;
