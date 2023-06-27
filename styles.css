@@ -66,15 +66,25 @@ ul {
 }
 .search-bar {
   grid-area: search;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-areas: "bnt search search";
+  /* gap: 1rem; */
   padding-left: 2.5rem;
 }
-.search {
-  size: 100px;
+input {
+  border-radius: 2rem;
+  width: 30rem;
+  height: 2rem;
 }
-
 .search-bnt {
-  background-color: var(--header-boxes-color);
+  grid-area: bnt;
+  padding: 0.5rem;
+  background-color: var(--side-bnt-color);
+  color: whitesmoke;
   border: none;
+  border-radius: 5px;
 }
 
 .bell-icon {
@@ -110,7 +120,13 @@ ul {
   content: "Hi there,";
   font-size: 0.75rem;
 }
-
+.head-bnt {
+  padding: 0.7rem;
+  background-color: var(--side-bnt-color);
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
 .header-bnt {
   display: flex;
   flex-direction: row;
@@ -119,13 +135,7 @@ ul {
 
   gap: 1rem;
 }
-.head-bnt {
-  padding: 0.7rem;
-  background-color: var(--side-bnt-color);
-  color: whitesmoke;
-  border: none;
-  border-radius: 5px;
-}
+
 /* main */
 #main {
   grid-area: main;
@@ -211,4 +221,12 @@ ul {
 
   display: flex;
   flex-direction: column;
+}
+
+/* icons */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+  color: whitesmoke;
+  opacity: 0.75;
 }
