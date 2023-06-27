@@ -38,10 +38,12 @@
   gap: 1rem;
   padding: 2rem;
 }
+
 ul {
   list-style-type: none;
   padding: 2rem;
 }
+
 /* header */
 #header {
   grid-area: header;
@@ -85,7 +87,7 @@ input {
   color: whitesmoke;
   border: none;
   border-radius: 5px;
-  
+}
 
 .bell-icon {
   grid-area: bellicon;
